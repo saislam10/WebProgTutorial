@@ -1,0 +1,18 @@
+HTML Tutorial: Please read up to the section titled “HTML vs. XHTML”
+https://www.w3schools.com/html/default.asp
+
+CSS Tutorial: Please read up to the section titled “CSS !mportant”
+You should also take a look at the “CSS Responsive” section.
+https://www.w3schools.com/css/default.asp
+
+CSS Reference: if you are looking for a specific CSS tag, this is the place to look
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+
+Alternative tutorials: https://developer.mozilla.org/en-US/docs/Learn
+	- For the Mozilla tutorial, you can follow the HTML and CSS subtopics. Soon  we’ll start playing with some Javascript in class.
+
+If you already know HTML/CSS, I would give a quick read for refreshing, but you should be ready to go.
+
+Here’s a sample/simple webpage. You don’t have to be super fancy with HTML/CSS. If you play with the webpage below, and understand what’s going on after reading the tutorials, you are good to go!
+
+<module1.zip>

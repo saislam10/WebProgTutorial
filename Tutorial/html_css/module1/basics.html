@@ -1,0 +1,84 @@
+<html lang="en">
+
+<head>
+
+	<!-- You can also define the contents of the file inside a <style> tag -->
+	<link rel="stylesheet" href="style_basic.css">
+</head>
+
+<body>
+	<h1> Main section </h1>
+
+	<h2> Subsection </h2>
+
+	<p style="color:orange"> My first paragraph, which is orange.</p>
+
+	<p> My second paragraph, and this is <b>bold</b>.</p>
+	<hr>
+
+	<table id="myTable">
+		<tr>
+			<th onclick="sortTable(0)"> Column a </th>
+			<th onclick="sortTable(1)"> Column b </th>
+		</tr>
+		<tr>
+			<td> data y1 </td>
+			<td> data x1 </td>
+		</tr>
+		<tr>
+			<td> data x2 </td>
+			<td> data y2 </td>
+		</tr>
+	</table>
+
+	<ul>
+		<li>Apple</li>
+		<li>Banana</li>
+		<li>Coconut</li>
+	</ul>
+
+	<div class="country">
+		This is a country, which is styled as blue.
+	</div>
+
+	<div class="city">
+		This is a city, which is styled as orange.
+	</div>
+
+	<div id="hourHolder"> Before </div>
+
+	<button
+		type="button"
+		onclick="displayHour()">
+		Click to show hour
+	</button>
+
+	<button
+		type="button"
+		onclick="sortTable(0)">
+		Sort the table
+	</button>
+</body>
+
+<script>
+function displayHour() {
+	document.getElementById('hourHolder').innerHTML = Date()
+}
+
+function sortTable(c) {
+	const table = document.getElementById('myTable')
+
+	// Ref1: https://www.w3schools.com/CSSref/sel_nth-child.php
+	// Ref2: https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child
+    	let items = Array.from(table.querySelectorAll('tr:nth-child(n+2)'))
+
+	let sortedItems = items.sort(
+		(item1, item2) => item1.children[c].innerText.localeCompare(item2.children[c].innerText)
+	)
+
+	// Works because the elements are reference to nodes, so reorganize them
+	sortedItems.forEach(item => table.appendChild(item))
+}
+</script>
+
+</html>
